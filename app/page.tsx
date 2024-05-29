@@ -1,22 +1,15 @@
+import FormFileInput from "@/components/FormFileInput";
 import Image from "next/image";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { InputFile } from "@/components/InputFile";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="container-chat p-10 mb-20 border border-slate-200 rounded-md">
+      <div className="container-chat p-10 mb-20 border border-slate-200 rounded-md w-full max-w-2xl">
         <div className="box-chat bg-zinc-300 min-w-96 min-h-full border-solid border-2 border-sky-500 rounded-lg p-5 ">
           AI output will show here
         </div>
-        <div className="box-input bg-zinc-300 min-w-80 min-h-full border-solid border-2 border-sky-200 rounded-lg p-5 mt-5 flex flex-row">
-          <InputFile />
-          <Input className="ml-5 w-96" placeholder="Enter your question" />
-          <Button className="ml-5" variant="outline">
-            send
-          </Button>
-        </div>
+
+        <FormFileInput />
       </div>
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
